@@ -5,6 +5,7 @@ var forecastContainer = document.querySelector(".hidden")
 var latNum
 var lonNum
 var cityName = document.querySelector("#cityName")
+var searchForm = document.querySelector("#search-form")
 
 var forecastDayOneTitle = document.querySelector("#forecastDay1")
 var weatherDayOne = document.querySelector("#weatherText1")
@@ -48,11 +49,9 @@ searchButton.addEventListener("click", function(){
     citySearch(searchQuery)
 });
 
-searchInput.addEventListener("submit",function(event){
+searchForm.addEventListener("submit",function(event){
     event.preventDefault()
-    var searchQuery = searchInput.value
-    console.log(searchQuery)
-    citySearch(searchQuery)
+
 });
 
 function citySearch(search){
@@ -76,8 +75,11 @@ function citySearch(search){
         console.log(lonNum)
 
         var cityList = document.createElement("section");
-        cityList.textContent = data[0].name
-        searchResults.appendChild(cityList)
+        searchResults.appendChild(cityList);
+        var cityLink = document.createElement("a");
+        cityLink.textContent = data[0].name
+        cityLink.setAttribute("href","")
+        cityList.appendChild(cityLink);
         fiveDayForecast()
 
 
@@ -132,6 +134,26 @@ function citySearch(search){
                 weatherTempFive.textContent = "Temp: " + data.list[32].main.temp + "°F"
                 windFive.textContent = "Wind: " + data.list[32].wind.speed + " MPH"
                 humFive.textContent = "Humidity: " + data.list[32].main.humidity + "%"
+
+                var savedForecast = [
+                    {
+                    date: forecastDayOneTitle.textContent,
+                    humidity: humOne.textContent,
+                    temp: weatherTempOne.textContent,
+                    wind: windOne.textContent,
+                    description: weatherDayOne.textContent
+                    },
+
+                    {
+                    date: forecastDayTwoTitle.textContent,
+                    humidity: humTwo.textContent,
+                    temp: weatherTempTwo.textContent,
+                    wind: windTwo.textContent,
+                    description: weatherDayTwo.textContent
+                    },
+                ]
+                console.log(savedForecast)
+    
             }
         })
     
