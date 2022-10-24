@@ -9,73 +9,84 @@
     href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
   />
   <link rel="stylesheet" href="./assets/style.css"/>
+  <script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+  </script>
 
-    <title>Document</title>
+    <title>Five Day Forecast</title>
 </head>
 <body>
     <main>
         <header>
             <div class="p-5 text-center bg-light">
-                <h1 class="mb-3">Heading</h1>
+                <h1 class="mb-3 bg-secondary text-white">Weather Dashboard</h1>
             </div>
         </header>
+        <form>
         <div class="container d-flex flex-column">
             <div class="input-group mb-3">
                 <h3>Search for a City:</h3>
                 <input type="text" class="form-control" id="search-input" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
                 <button class="btn btn-primary btn-lg btn-block" id="button-addon2">Search</button>
-            </div>    
-                <section id="search-results">aaaaaa</section>
+            </div>
+        </form>    
+                <h4 id="search-results">Previous Searches:</h4>
                 <h2>Five Day Forecast</h2>
+                <h3 class="text-center" id="cityName"></h3>
                 <div class="card-group d-flex flex-row">
-                    <div class="card d-flex align-items-center">
+                    <div class="card d-flex align-items-center m-3 card text-white bg-dark">
                       <img class="card-img-top" id="img1" src="assets/img/img holder.svg" alt="Card image cap">
                       <div class="card-body">
                         <h5 class="card-title text-center" id="forecastDay1">Card title</h5>
-                        <p class="card-text text-center" id="weatherText1">weatherText1.</p>
+                        <p class="card-text text-center" id="hum1">weatherText1.</p>
                         <p class="card-text text-center" id="weatherTemp1">weatherTemp1.</p>
                         <p class="card-text text-center" id="wind1">wind.</p>
-                        <p class="card-text text-center"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        <p class="card-text text-center"><small class="text-white" id="weatherText1">Last updated 3 mins ago</small></p>
                       </div>
                     </div>
-                    <div class="card d-flex align-items-center">
+                    <div class="card d-flex align-items-center m-3 card text-white bg-dark">
                       <img class="card-img-top" id="img2" src="assets/img/img holder.svg" alt="Card image cap">
                       <div class="card-body">
                         <h5 class="card-title text-center" id="forecastDay2">Card title2</h5>
-                        <p class="card-text text-center" id="weatherText2">weatherText2.</p>
+                        <p class="card-text text-center" id="hum2">weatherText2.</p>
                         <p class="card-text text-center" id="weatherTemp2">weatherTemp2.</p>
                         <p class="card-text text-center" id="wind2">wind.</p>
-                        <p class="card-text text-center"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        <p class="card-text text-center"><small class="text-white" id="weatherText2">Last updated 3 mins ago</small></p>
                       </div>
                     </div>
-                    <div class="card d-flex align-items-center">
+                    <div class="card d-flex align-items-center m-3 card text-white bg-dark">
                         <img class="card-img-top" id="img3" src="assets/img/img holder.svg" alt="Card image cap">
                         <div class="card-body">
-                          <h5 class="card-title text-center" id="forecastDay2">Card title2</h5>
-                          <p class="card-text text-center" id="weatherText2">weatherText2.</p>
-                          <p class="card-text text-center" id="weatherTemp2">weatherTemp2.</p>
-                          <p class="card-text text-center" id="wind2">wind.</p>
-                          <p class="card-text text-center"><small class="text-muted">Last updated 3 mins ago</small></p>
+                          <h5 class="card-title text-center" id="forecastDay3">Card title2</h5>
+                          <p class="card-text text-center" id="hum3">weatherText2.</p>
+                          <p class="card-text text-center" id="weatherTemp3">weatherTemp2.</p>
+                          <p class="card-text text-center" id="wind3">wind.</p>
+                          <p class="card-text text-center"><small class="text-white" id="weatherText3">Last updated 3 mins ago</small></p>
                         </div>
                       </div>
-                    <div class="card">
-                        <img class="card-img-top" src="assets/img/img holder.svg" alt="Card image cap">
+                      <div class="card d-flex align-items-center m-3 card text-white bg-dark">
+                        <img class="card-img-top" id="img4" src="assets/img/img holder.svg" alt="Card image cap">
                         <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                          <h5 class="card-title text-center" id="forecastDay4">Card title2</h5>
+                          <p class="card-text text-center" id="hum4">weatherText2.</p>
+                          <p class="card-text text-center" id="weatherTemp4">weatherTemp2.</p>
+                          <p class="card-text text-center" id="wind4">wind.</p>
+                          <p class="card-text text-center"><small class="text-white" id="weatherText4">Last updated 3 mins ago</small></p>
                         </div>
                       </div>
-                      <div class="card">
-                        <img class="card-img-top" src="assets/img/img holder.svg" alt="Card image cap">
+                      <div class="card d-flex align-items-center m-3 card text-white bg-dark">
+                        <img class="card-img-top" id="img5" src="assets/img/img holder.svg" alt="Card image cap">
                         <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                          <h5 class="card-title text-center" id="forecastDay5">Card title2</h5>
+                          <p class="card-text text-center" id="hum5">weatherText2.</p>
+                          <p class="card-text text-center" id="weatherTemp5">weatherTemp2.</p>
+                          <p class="card-text text-center" id="wind5">wind.</p>
+                          <p class="card-text text-center"><small class="text-white" id="weatherText5">Last updated 3 mins ago</small></p>
                         </div>
                       </div>
                   </div>
-
+                  
         </div>
     </main>
     
