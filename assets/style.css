@@ -2,4 +2,9 @@ img{
     max-width: fit-content;
     max-height: fit-content;
     background-color:black;
+    border-radius: 50px;
+}
+
+li:hover{
+    cursor: pointer;
 }
