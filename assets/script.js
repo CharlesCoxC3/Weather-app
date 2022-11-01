@@ -44,7 +44,8 @@ var weatherTempFive = document.querySelector("#weatherTemp5")
 var windFive = document.querySelector("#wind5")
 var imageFive = document.querySelector("#img5")
 var humFive = document.querySelector("#hum5")
-var savedForecast
+var previousSearchUl = document.createElement("ul")
+searchResults.append(previousSearchUl)
 var savedSearches = []
 
 //loads previous searches if any
@@ -58,7 +59,7 @@ addEventListener("load",function(){
 
         var cityLink = document.createElement("li");
         cityLink.textContent = savedSearches[i]
-        searchResults.appendChild(cityLink)
+        previousSearchUl.append(cityLink)
     //    console.log(cityLink.textContent)
     }
     cityLink.addEventListener("click",function(){
@@ -77,16 +78,19 @@ addEventListener("load",function(){
 searchButton.addEventListener("click", function(ev){
     ev.preventDefault()
     var searchQuery = searchInput.value
-    console.log(searchQuery)
+//   console.log(searchQuery)
     citySearch(searchQuery)
+
     var cityLink = document.createElement("li");
     cityLink.textContent = searchInput.value
-    searchResults.appendChild(cityLink);
+    previousSearchUl.append(cityLink);
+
     var savedSearched = searchInput.value    
     savedSearches.push(savedSearched)
     localStorage.setItem("savedSearches", JSON.stringify(savedSearches))
+
     cityLink.addEventListener("click",function(){
-        console.log(cityLink.textContent)
+//    console.log(cityLink.textContent)
         searchQuery = cityLink.textContent
         citySearch(searchQuery)
     })
