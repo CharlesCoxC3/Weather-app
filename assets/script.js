@@ -98,7 +98,7 @@ searchButton.addEventListener("click", function(ev){
 
 //takes value of search input and fetches api data
 function citySearch(search){
-    var cityUrl = "http://api.openweathermap.org/geo/1.0/direct?q=" + encodeURIComponent(search) 
+    var cityUrl = "https://api.openweathermap.org/geo/1.0/direct?q=" + encodeURIComponent(search) 
                 + "&limit=1&appid=5a69d7be0eb17b91b671817abaaadbbb";
     //            console.log(cityUrl)
 
