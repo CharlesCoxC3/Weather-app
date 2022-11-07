@@ -121,7 +121,7 @@ function citySearch(search){
     //displays forecast for five days
         fiveDayForecast()
     function fiveDayForecast(){
-        var fiveDayUrl =  "http://api.openweathermap.org/data/2.5/forecast?lat=" + latNum
+        var fiveDayUrl =  "https://api.openweathermap.org/data/2.5/forecast?lat=" + latNum
     + "&lon=" + lonNum + "&units=imperial" + "&appid=5a69d7be0eb17b91b671817abaaadbbb";
     //    console.log(fiveDayUrl)
         fetch(fiveDayUrl).then(function(response){
