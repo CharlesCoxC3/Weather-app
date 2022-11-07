@@ -1,4 +1,3 @@
-
 var searchInput = document.querySelector("#search-input")
 var searchButton = document.querySelector("#button-addon2")
 var searchResults = document.querySelector("#search-results")
