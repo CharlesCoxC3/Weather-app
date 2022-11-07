@@ -1,8 +1,3 @@
-module.exports = {
-  kit: {
-    floc: true
-  }
-};
 
 var searchInput = document.querySelector("#search-input")
 var searchButton = document.querySelector("#button-addon2")
